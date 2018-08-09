@@ -1,0 +1,34 @@
+﻿@model SoftUniBabies.Models.Baby
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="wrapper">
+    @using (Html.BeginForm("Create", "Baby", FormMethod.Post, new { @class = "baby-create" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="create-header">
+            Register Baby
+        </div>
+        <div class="create-name">
+            <div class="create-label">Name</div>
+            <input class="create-content" name="name"/>
+        </div>
+        <div class="create-name">
+            <div class="create-label">Gender</div>
+            <select class="create-submit" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="create-name">
+            <div class="create-label">Birth Day</div>
+            <input type="date" min="2018-01-22" max="2018-04-27" class="create-content" name="birthday" />
+        </div>
+        <div class="create-button-holder">
+            <button type="submit" class="submit-button">Add Baby</button>
+            <a type="button" href="/" class="back-button">Back</a>
+        </div>
+    }
+</div>

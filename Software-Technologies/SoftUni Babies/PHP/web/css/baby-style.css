@@ -1,0 +1,107 @@
+body {
+    background-color: #ffd1d7;
+}
+
+/*.cat-name{*/
+    /*color: #ffffff;*/
+/*}*/
+
+
+textarea, input, select {
+    resize: none;
+    outline: none;
+    padding: 2%;
+}
+
+.wrapper {
+    width: 70%;
+    margin: 3% auto;
+}
+
+.wrapper .baby-create {
+    display: block;
+    width: 100%;
+}
+
+.wrapper .baby-create .create-header {
+    width: 100%;
+    text-align: center;
+    font-size: 6em;
+    font-weight: bold;
+}
+
+.wrapper .baby-create .create-name
+{
+    display: block;
+    width: 50%;
+    margin: 2% auto;
+}
+
+.wrapper .baby-create .create-name .create-label
+{
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.wrapper .baby-create .create-name .create-content
+{
+    margin-top: 1%;
+    font-size: 2.5em;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.wrapper .baby-create .create-name .create-submit
+{
+    margin-top: 1%;
+    font-size: 2.5em;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.wrapper .create-button-holder {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    font-size: 2.0em;
+    text-overflow: clip;
+}
+
+.wrapper .create-button-holder .submit-button{
+    margin: 5%;
+}
+
+.wrapper .create-button-holder>* {
+    display: inline-block;
+    background-color: #ffd1d7;
+}
+
+.wrapper .create-button-holder a[type="button"],
+.wrapper .create-button-holder button
+{
+    width: 50%;
+    margin: auto;
+    padding: 1%;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Arial;
+    border-radius: 5px;
+    border: 2px solid #fbb1c6;
+    background-color: #fbb1c6;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.wrapper .create-button-holder a[type="button"]:hover,
+.wrapper .create-button-holder button:hover {
+    cursor: pointer;
+    background-color: #ffb7b9;
+    color: #ffffff;
+}
+
+.wrapper .create-button-holder a[type="button"]:hover,
+.wrapper .create-button-holder button:focus {
+    outline: none;
+}

@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <form class="baby-create" method="post" th:action="@{/delete/{id}(id=${baby.id})}">
+        <div class="create-header">
+            Grow Up Baby
+        </div>
+        <div class="create-name">
+            <div class="create-label">Name</div>
+            <input class="create-content" name="name" th:field="${baby.name}" disabled="disabled"/>
+        </div>
+        <div class="create-name">
+            <div class="create-label">Gender</div>
+            <select class="create-submit" name="gender" th:field="${baby.gender}" disabled="disabled">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="create-name">
+            <div class="create-label">Birth Day</div>
+            <input type="date" min="2018-01-22" max="2018-04-27" class="create-content" name="birthday" th:field="${baby.birthday}" disabled="disabled"/>
+        </div>
+        <div class="create-button-holder">
+            <button type="submit" class="submit-button">Grow Up</button>
+            <a type="button" href="/" class="back-button">Back</a>
+        </div>
+    </form>
+</div>

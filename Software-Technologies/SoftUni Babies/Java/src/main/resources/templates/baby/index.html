@@ -1,0 +1,37 @@
+<div class="wrapper" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="baby-create">
+        <div class="create-header">
+            SoftUni Babies
+        </div>
+    </div>
+    <br></br>
+    <div class="button-holder">
+        <a type="button" href="/create" class="log-button">Register Baby</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="baby-label">Name</div>
+            <div class="baby-label">Gender</div>
+            <div class="baby-label">Birthday</div>
+            <div class="baby-label">Actions</div>
+        </div>
+        <div class="main">
+            <th:block th:each="baby : ${babies}">
+                <div class="baby">
+                    <div class="baby-name" th:text="${baby.name}">
+                    </div>
+                    <div class="baby-name" th:text="${baby.gender}">
+
+                    </div>
+                    <div class="baby-name" th:text="${baby.birthday}">
+
+                    </div>
+                    <div class="baby-actions">
+                        <a type="button" th:href="@{/edit/{id}(id=${baby.id})}" class="edit-button">Edit</a>
+                        <a type="button" th:href="@{/delete/{id}(id=${baby.id})}" class="delete-button">Grow Up</a>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+    </div>
+</div>

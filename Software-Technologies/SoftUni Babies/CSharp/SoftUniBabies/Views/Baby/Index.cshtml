@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SoftUniBabies.Models.Baby>
+
+@{
+    ViewData["Title"] = "SoftUni Babies";
+}
+<div class="wrapper">
+    <div class="baby-create">
+        <div class="create-header">
+            SoftUni Babies
+        </div>
+    </div>
+    <br />
+    <div class="button-holder">
+        <a type="button" href="/create" class="log-button">Register Baby</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="baby-label">Name</div>
+            <div class="baby-label">Gender</div>
+            <div class="baby-label">Birthday</div>
+            <div class="baby-label">Actions</div>
+        </div>
+        <div class="main">
+            @foreach (var baby in Model.ToList())
+            {
+                <div class="baby">
+                    <div class="baby-name">
+                        @(baby.Name)
+                    </div>
+                    <div class="baby-name">
+                        @(baby.Gender)
+                    </div>
+                    <div class="baby-name">
+                        @(baby.Birthday)
+                    </div>
+                    <div class="baby-actions">
+                        @Html.ActionLink("Edit", "Edit", "Baby", new { id = baby.Id }, new { @class = "edit-button" })
+                        @Html.ActionLink("GrowUp", "Delete", "Baby", new { id = baby.Id }, new { @class = "delete-button" })
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

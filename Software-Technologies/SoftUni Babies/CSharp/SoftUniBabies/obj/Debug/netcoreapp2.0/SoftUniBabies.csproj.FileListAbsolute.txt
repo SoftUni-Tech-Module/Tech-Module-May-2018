@@ -1,0 +1,11 @@
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\bin\Debug\netcoreapp2.0\SoftUniBabies.deps.json
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\bin\Debug\netcoreapp2.0\SoftUniBabies.runtimeconfig.json
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\bin\Debug\netcoreapp2.0\SoftUniBabies.runtimeconfig.dev.json
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\bin\Debug\netcoreapp2.0\SoftUniBabies.dll
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\bin\Debug\netcoreapp2.0\SoftUniBabies.pdb
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\obj\Debug\netcoreapp2.0\SoftUniBabies.csprojAssemblyReference.cache
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\obj\Debug\netcoreapp2.0\SoftUniBabies.csproj.CoreCompileInputs.cache
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\obj\Debug\netcoreapp2.0\SoftUniBabies.AssemblyInfoInputs.cache
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\obj\Debug\netcoreapp2.0\SoftUniBabies.AssemblyInfo.cs
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\obj\Debug\netcoreapp2.0\SoftUniBabies.dll
+C:\Projects\ExamPrep\CSharp\SoftUniBabies\obj\Debug\netcoreapp2.0\SoftUniBabies.pdb

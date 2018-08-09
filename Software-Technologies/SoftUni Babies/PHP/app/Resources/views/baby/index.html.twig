@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+    <div class="wrapper">
+        <div class="baby-create">
+            <div class="create-header">
+                SoftUni Babies
+            </div>
+        </div>
+        <br>
+        <div class="button-holder">
+            <a type="button" href="/create" class="log-button">Register Baby</a>
+        </div>
+        <div class="content">
+            <div class="header">
+                <div class="baby-label">Name</div>
+                <div class="baby-label">Gender</div>
+                <div class="baby-label">Birthday</div>
+                <div class="baby-label">Actions</div>
+            </div>
+            <div class="main">
+                {% for baby in babies %}
+                    <div class="baby">
+                        <div class="baby-name">
+                            {{ baby.name }}
+                        </div>
+                        <div class="baby-name">
+                            {{ baby.gender }}
+                        </div>
+                        <div class="baby-name">
+                            {{ baby.birthday }}
+                        </div>
+                        <div class="baby-actions">
+                            <a type="button" href="{{ path('edit', {id: baby.id}) }}" class="edit-button">Edit</a>
+                            <a type="button" href="{{ path('delete', {id: baby.id}) }}" class="delete-button">GrowUp</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
