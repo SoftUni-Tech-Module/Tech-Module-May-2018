@@ -1,0 +1,34 @@
+﻿@model List<Project>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="wrapper">
+    <div class="button-holder">
+        <a type="button" href="/create" class="log-button">Create New Project</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="project-label">Project</div>
+            <div class="budget-label">Budget</div>
+            <div class="actions-label">Actions</div>
+        </div>
+        <div class="main">
+            @foreach (var project in Model.ToList())
+            {
+                <div class="project">
+                    <div class="project-title">
+                        @(project.Title)
+                    </div>
+                    <div class="project-budget">
+                        @(project.Budget)
+                    </div>
+                    <div class="project-actions">
+                        @Html.ActionLink("Edit", "Edit", "Project", new { id = project.Id }, new { @class = "edit-button" })
+                        @Html.ActionLink("Delete", "Delete", "Project", new { id = project.Id }, new { @class = "delete-button" })
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

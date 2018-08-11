@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <form class="project-create" method="post" th:action="@{/edit/{id}(id=${project.id})}">
+        <div class="create-header">
+            Edit Project
+        </div>
+        <div class="create-title">
+            <div class="create-title-label">Title</div>
+            <input class="create-title-content" name="title" th:field="${project.title}" />
+        </div>
+        <div class="create-description">
+            <div class="create-description-label">Description</div>
+            <textarea rows="3" class="create-description-content" name="description" th:field="${project.description}"></textarea>
+        </div>
+        <div class="create-budget">
+            <div class="create-budget-label">Budget</div>
+            <input type="number" min="0" class="create-budget-content" name="budget" th:field="${project.budget}" />
+        </div>
+        <div class="create-button-holder">
+            <button type="submit" class="submit-button">Edit Project</button>
+            <a type="button" href="/" class="back-button">Back</a>
+        </div>
+    </form>
+</div>

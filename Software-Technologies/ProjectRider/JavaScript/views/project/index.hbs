@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div class="button-holder">
+        <a type="button" href="/create" class="log-button">Create New Project</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="project-label">Project</div>
+            <div class="budget-label">Budget</div>
+            <div class="actions-label">Actions</div>
+        </div>
+        <div class="main">
+            {{#each projects}}
+            <div class="project">
+                <div class="project-title">
+                    {{title}}
+                </div>
+                <div class="project-budget">
+                    {{budget}}
+                </div>
+                <div class="project-actions">
+                    <a type="button" href="/edit/{{id}}" class="edit-button">Edit</a>
+                    <a type="button" href="/delete/{{id}}" class="delete-button">Delete</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+﻿@model Project
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="wrapper">
+    @using (Html.BeginForm("Create", "Project", FormMethod.Post, new { @class = "project-create" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="create-header">
+            Create New Project
+        </div>
+        <div class="create-title">
+            <div class="create-title-label">Title</div>
+            <input class="create-title-content" asp-for="Title" />
+            <span asp-validation-for="Title"></span>
+        </div>
+        <div class="create-description">
+            <div class="create-description-label">Description</div>
+            <textarea rows="3" class="create-description-content" asp-for="Description"></textarea>
+            <span asp-validation-for="Description"></span>
+        </div>
+        <div class="create-budget">
+            <div class="create-budget-label">Budget</div>
+            <input type="number" min="0" class="create-budget-content" asp-for="Budget" />
+            <span asp-validation-for="Budget"></span>
+        </div>
+        <div class="create-button-holder">
+            <button type="submit" class="submit-button">Create Project</button>
+            <a type="button" href="/" class="back-button">Back</a>
+        </div>
+    }
+</div>

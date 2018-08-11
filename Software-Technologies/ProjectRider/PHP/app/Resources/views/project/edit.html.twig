@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+<div class="wrapper">
+    <form class="project-create" method="post">
+        <div class="create-header">
+            Edit Project
+        </div>
+        <div class="create-title">
+            <div class="create-title-label">Title</div>
+            <input class="create-title-content" name="project[title]" value="{{ project.title }}" />
+        </div>
+        <div class="create-description">
+            <div class="create-description-label">Description</div>
+            <textarea rows="3" class="create-description-content" name="project[description]">{{ project.description }}</textarea>
+        </div>
+        <div class="create-budget">
+            <div class="create-budget-label">Budget</div>
+            <input type="number" min="0" class="create-budget-content" name="project[budget]" value="{{ project.budget }}" />
+        </div>
+        <div class="create-button-holder">
+            <button type="submit" class="submit-button">Edit Project</button>
+            <a type="button" href="/" class="back-button">Back</a>
+        </div>
+
+    </form>
+</div>
+{% endblock %}
+

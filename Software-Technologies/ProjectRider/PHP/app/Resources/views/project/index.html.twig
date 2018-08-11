@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+<div class="wrapper">
+    <div class="button-holder">
+        <a type="button" href="/create" class="log-button">Create New Project</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="project-label">Project</div>
+            <div class="budget-label">Budget</div>
+            <div class="actions-label">Actions</div>
+        </div>
+        <div class="main">
+            {% for project in projects %}
+                <div class="project">
+                    <div class="project-title">
+                        {{ project.title }}
+                    </div>
+                    <div class="project-budget">
+                        {{ project.budget }}
+                    </div>
+                    <div class="project-actions">
+                        <a type="button" href="{{ path('edit', {id: project.id}) }}" class="edit-button">Edit</a>
+                        <a type="button" href="{{ path('delete', {id: project.id}) }}" class="delete-button">Delete</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

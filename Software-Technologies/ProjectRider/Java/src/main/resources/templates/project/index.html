@@ -1,0 +1,26 @@
+<div class="wrapper" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="button-holder">
+        <a type="button" href="/create" class="log-button">Create New Project</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="project-label">Project</div>
+            <div class="budget-label">Budget</div>
+            <div class="actions-label">Actions</div>
+        </div>
+        <div class="main">
+            <th:block th:each="project : ${projects}">
+                <div class="project">
+                    <div class="project-title" th:text="${project.title}">
+                    </div>
+                    <div class="project-budget" th:text="${project.budget}">
+                    </div>
+                    <div class="project-actions">
+                        <a type="button" th:href="@{/edit/{id}(id=${project.id})}" class="edit-button">Edit</a>
+                        <a type="button" th:href="@{/delete/{id}(id=${project.id})}" class="delete-button">Delete</a>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+    </div>
+</div>
